@@ -9,3 +9,4 @@ and can share with other people what they enjoyed....
 1.change proxy to send request form react frontend
 put it inside the package.json  == rerun terminal after change in package.json
 2.put cors() before sending request to backend
+3.
