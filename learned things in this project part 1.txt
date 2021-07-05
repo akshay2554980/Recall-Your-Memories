@@ -1,0 +1,75 @@
+body-parser-enable us to send pull request
+cors - cross origin request
+express - routing of application
+mongoose - to create modules for our post
+nodemon - not need to manually reset the server 
+axios - make us able to send post request to the server from frontend.
+moment - library to work with time and date.
+react-file-base64 ->this is used to convert our images.
+redux 
+redux-thunk -> asyn action using redux. 
+
+--------------------------------------------------------------------
+what is the need of schema
+ans-> in mongodb we can have data of very different kind and
+to keep uniform nature of the data we define a schema
+and all the data push into a collection is of now same schema and type.
+
+--------------------------------------------------------------------
+using material ui to create the frontend
+using material ui way of styling- using styles.js .. to add styles
+in this project i have a lot of folder structuring 
+and it works well in large and medium level applications.
+
+adding styles in the files using materialui
+--------------------------------------------------------------------
+using axios to make api calls from the frontend to backend.
+
+
+__________________________________________________________________________________
+ADDING REDUX TO MY PROJECT
+all actions in the backend are going to be done using redux.
+adding redux because i thought of expanding this project on a large scale
+so redux is best to use in this senario. : great in long run...and make application scaleable
+
+1.create store
+2.create reducers.
+3.pass the reducers to the store as parameter
+4.wrap the app inside the provider. 
+5.pass the store inside the provider.
+
+
+-----------------------------------------------------------------
+now getting the data from the store in whichever component we need.
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+***************************************************************************************************************************
+flow of redux.
+1.i call a fuction or dispatch it  ->    dispatch(createPost(postData));
+2.now action is called and changes inside the backend and api calls are done
+3.i got the updated result 
+4.and now with this updated result i can change the front end state 
+5.so to change the frontend state i will dispatch a action type with updated data from api call .
+6.this dispatch action will go to reducer and will return some thing and that thing will change the frontend. 
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+now when i click on the 3dots to repopulate the form 
+i did it with 2 ways one is to make a state in app.js and passing it the form and 
+post and changing the state
+and 2nd way is to retrive the state using the redux. 
+1.in the props drilling method the moment i use setcurrentId 
+  it changes the state in posts,form and app also....as the state is coming from app.js
+
+
+
+
+
+
+In auth 
+rather than creating two different forms for signuup and signin we can just toggle between a value for making it change its easy and less work need to be done to
+get same output... show it effectivly in interview.....
