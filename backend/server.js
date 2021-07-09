@@ -5,7 +5,7 @@ import express from 'express'
 const app = express();
 import postsroute from './routes/posts.js'               //remember to give js extension to imports in node no need to do it in reactjs
 import userRoutes from './routes/user.js'
-
+import dotenv from 'dotenv'
 
 app.use(bodyParser.json({limit:"30mb",extended:"true"}))        //as we are gettting images here so limit is imp
 app.use(bodyParser.urlencoded({limit:"30mb",extended:"true"}))  //so that we can properly send our request

@@ -13,8 +13,6 @@ export const signUp = (formData,history) =>async(dispatch) =>{
 
 export const signIn = (formData,history) =>async(dispatch) =>{
     try {
-        // const {data} = await api.createPost(newpost);
-        //sigin the user
         const {data} = await api.signIn(formData)
         dispatch({type:"AUTH",data:data})
         history.push('/');

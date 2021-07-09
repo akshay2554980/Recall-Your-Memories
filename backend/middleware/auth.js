@@ -3,6 +3,10 @@
 // the token and then we will check that the user is valid to do that or not
 
 import jwt from 'jsonwebtoken'
+import dotenv from 'dotenv'
+
+//dotenv.config();
+const secret = "test";
 
 //eg. i want to like a post.
 //click the like button => auth middleware(next) => like controller.
@@ -18,7 +22,7 @@ const auth = async(req,res,next) =>{
         // as we know the token itself has the data of user so we decode it.
         let decodedData;
         if(token && isCustomAuth){
-            decodedData = jwt.verify(token,'test') 
+            decodedData = jwt.verify(token,secret) 
             req.userId = decodedData?.id;
         } 
         else{

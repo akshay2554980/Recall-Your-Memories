@@ -4,6 +4,8 @@ import makeStyles from './styles'
 import {Link,useHistory,useLocation} from 'react-router-dom'
 import {useDispatch} from 'react-redux'
 import memories from '../images/memories.png'
+import decode from 'jwt-decode'
+
 function Navbar() {
     const [user,setuser] =  useState( JSON.parse( localStorage.getItem('profile') ));  //setting into localstorage.
     const dispatch = useDispatch();
@@ -13,7 +15,12 @@ function Navbar() {
     //for changing to new token
     useEffect(() => {
         const token =  user?.token; 
-        //jwt 
+        if(token){
+            const decodedToken = decode(token);
+            if(decodedToken.exp*1000 < new Date().getTime()){
+                logout();
+            }
+        }
         setuser(JSON.parse( localStorage.getItem('profile') )); //setting the user to new user in localstorage
     },[location]) // '/auth' -> '/' 
     //when ever there is change in url(location) we do the side effect.here 
