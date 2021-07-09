@@ -35,11 +35,11 @@ export const likePost = (id) =>{
 }
 
 export const signIn = (formData) =>{
-    const response = API.post(`/user/signin`,formData)
+    const response = API.post('/user/signin',formData)
     return response;
 }
 
 export const signUp = (formData) =>{
-    const response = API.post(`/user/signup`,formData)
+    const response = API.post('/user/signup',formData)
     return response;
 }

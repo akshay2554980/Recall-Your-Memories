@@ -27,8 +27,8 @@ function Navbar() {
     const classes = makeStyles();
 
     const logout = () =>{
-        dispatch({type:'LOGOUT'});
         setuser(null);
+        dispatch({type:'LOGOUT'});
         history.push('/');
         
     }

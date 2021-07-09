@@ -42,11 +42,12 @@ const handleSubmit=(e)=>{
 // i set the postdata to post 
 
 
-const user = JSON.parse(localStorage.getItem('profile'));
+//const user = JSON.parse(localStorage.getItem('profile'));
 
-// useEffect(()=>{
-//  setuser(JSON.parse(localStorage.getItem('profile')));
-// },[user])
+const [user, setuser] = useState(JSON.parse(localStorage.getItem('profile')));
+useEffect(()=>{
+ setuser(JSON.parse(localStorage.getItem('profile')));
+},[user])
 //JSON.parse(localStorage.getItem('profile'));
 
 if(!user?.result?.name){

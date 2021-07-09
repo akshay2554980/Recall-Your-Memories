@@ -33,8 +33,9 @@ function Auth() {
         setshowPassword((state) => !state);
     }
     const switchMode = () => {
+        setformData({firstName: "", lastName: "", email: "", password: "", confirmPassword: ""});
         setisSignup((prevstate) => !prevstate)
-        handleshowPassword(false);
+        setshowPassword(false);
     }
     const googleSuccess =  async(res)=>{         //this is  a async function
        console.log(res);
