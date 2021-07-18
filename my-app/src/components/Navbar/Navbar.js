@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { AppBar, Typography, Toolbar, Button, Avatar } from "@material-ui/core";
 import {Link, useHistory, useLocation} from "react-router-dom";
-import photogram from "../../images/PhotogramIcon.jpg";
+import memory from "../../images/memory.png";
 import useStyles from "./styles";
 import decode from "jwt-decode";
 
@@ -36,7 +36,7 @@ const Navbar = () => {
         <AppBar className={classes.appBar} position="static" color="inherit">
            <div className={classes.brandContainer}>
               <Typography component={Link} to="/" className={classes.heading} variant="h3" align="center">Recall Your Memories</Typography>
-              <img className={classes.image} src={photogram} alt="photogram" height="60"/>
+              <img className={classes.image} src={memory} alt="memory" height="60"/>
            </div>
            <Toolbar className={classes.toolbar}>
                {user ? (
